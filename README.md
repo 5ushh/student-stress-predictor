@@ -1,26 +1,41 @@
 # Student Stress Predictor
 
-Machine Learning final project for ECE-GY 6143.
+ML classification pipeline to predict student stress levels from behavioral and academic indicators.
 
-## Overview
-This project predicts student academic stress levels (Low, Medium, High) using
-lifestyle and academic features such as study hours, sleep duration, physical activity,
-screen time, and academic workload.
+## Problem
 
-A progressive modeling approach was used:
-- Logistic Regression (baseline)
-- Random Forest (non-linear interactions)
-- Neural Network (behavioral feature learning)
+Student stress is a growing concern in higher education. Early identification of at-risk students using data-driven signals can support timely intervention.
 
-## Files
-- `student_stress_ml.ipynb` – Complete implementation and experiments
-- `final_ml_project.pdf` – Final project report with results and analysis
+## Approach
 
-## Models Used
-- Logistic Regression
-- Random Forest
-- Multi-Layer Perceptron (Neural Network)
+- Collected and cleaned 5,000+ structured student records
+- Performed feature engineering to identify top stress indicators
+- Benchmarked 4 classification models (Logistic Regression, Decision Tree, Random Forest, SVM)
+- Selected best model using F1-score and ROC-AUC to account for class imbalance
+- Identified top 5 predictive features influencing stress levels
 
 ## Results
-The neural network achieved the highest accuracy (99.6%), while Random Forest
-provided strong interpretability through feature importance analysis.
+
+| Metric | Score |
+|--------|-------|
+| Best model accuracy | 84% |
+| Evaluation metrics | F1-score, ROC-AUC |
+| Dataset size | 5,000+ records |
+| Models compared | 4 |
+
+## Tech Stack
+
+Python · Pandas · Scikit-learn · SQL · Matplotlib
+
+## Setup
+
+```bash
+git clone https://github.com/5ushh/student-stress-predictor
+cd student-stress-predictor
+pip install pandas scikit-learn matplotlib
+python train.py
+```
+
+## Note
+
+Developed as part of ML coursework at NYU (Dec 2025).
